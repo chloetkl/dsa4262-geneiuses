@@ -1,0 +1,28 @@
+# Get unique genes
+unique_genes = df['gene_id'].unique()
+
+# Perform the train-test split on genes
+genes_train, genes_test = train_test_split(unique_genes, test_size=0.2, random_state=42)
+
+# Split the dataset based on the gene split
+train_data = df[df['gene_id'].isin(genes_train)]
+test_data = df[df['gene_id'].isin(genes_test)]
+
+# Define feature columns
+feature_columns = [
+    '-1 Dwelling Time', '-1 Standard Dev', '-1 Mean Current',
+    '0 Dwelling Time', '0 Standard Dev', '0 Mean Current',
+    '+1 Dwelling Time', '+1 Standard Dev', '+1 Mean Current'
+]
+
+# Create the feature and target variables for training and testing
+X_train = train_data[feature_columns]
+y_train = train_data['label']
+X_test = test_data[feature_columns]
+y_test = test_data['label']
+
+# Output the shapes to verify the split
+print(f"Training Features Shape: {X_train.shape}")
+print(f"Test Features Shape: {X_test.shape}")
+print(f"Training Labels Shape: {y_train.shape}")
+print(f"Test Labels Shape: {y_test.shape}")
