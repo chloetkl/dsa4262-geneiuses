@@ -1,3 +1,6 @@
+!pip install scikit-learn
+from sklearn.model_selection import train_test_split
+
 # Get unique genes
 unique_genes = df['gene_id'].unique()
 
