@@ -1,3 +1,2 @@
-code/dataset0.csv
+data/*
 *.ipynb_checkpoints/
-code/features_labelled.csv
