@@ -7,9 +7,9 @@ sudo apt install -y python3-pip
 pip install jupyter
 pip install nbstripout
 
-# Add Jupyter to PATH in .bashrc if not already present
-if ! grep -q 'export PATH=$PATH:/home/ubuntu/.local/bin' ~/.bashrc; then
-    echo 'export PATH=$PATH:/home/ubuntu/.local/bin' >> ~/.bashrc
+# Add local bin to PATH in .bashrc if not already present
+if ! grep -q 'export PATH=$PATH:~/.local/bin' ~/.bashrc; then
+    echo 'export PATH=$PATH:~/.local/bin' >> ~/.bashrc
 fi
 
 # Reload .bashrc to apply PATH changes

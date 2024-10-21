@@ -49,11 +49,11 @@ Copy either of the output links that are shown in the terminal under "Or copy an
 ```
 2.3 Change directory to Git Repository
 ```
-cd dsa4262
+$ cd dsa4262-geneiuses
 ```
 
-2.3 On a new terminal, run
+2.4 On a new terminal, run
 `ssh -NL 8082:127.0.0.1:8082 ubuntu@<EC2 IP address> -i <Key Pair Path>`
 Note: There is no output
 
-2.4 Paste the output link from step 2.2 into your browser
+2.5 Paste the output link from step 2.2 into your browser
