@@ -15,12 +15,12 @@ $ ssh -i <path to pem file> ubuntu@<instance ip address>
 ```
 $ ssh-keygen -t rsa -b 4096 -C "<Insert your git email>"
 Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa): geneiuses_ec2
-$ eval "$(ssh-agent -s)"
 $ cat ~/geneiuses_ec2.pub # copy the output 
 ```
 
 1.4 Create SSH key in Github and paste the key in Github
 ```
+$ eval "$(ssh-agent -s)"
 $ ssh-add geneiuses_ec2
 $ git clone git@github.com:chloetkl/dsa4262-geneiuses.git
 ```
