@@ -5,11 +5,13 @@
 ## Installing Jupyter within an EC2 Instance 
 ```sudo apt update
 sudo apt install python3-pip
-pip install jupyter```
+pip install jupyter
+```
 
 ### Write Jupyter to PATH
 ```nano ~/.bashrc
-export PATH=$PATH:/home/ubuntu/.local/bin # Add this line```
+export PATH=$PATH:/home/ubuntu/.local/bin # Add this line
+```
 
 ## Running Jupyter
 ```source ~/.bashrc
