@@ -36,9 +36,13 @@ $ ./setup.sh
 
 2.2 Run Jupyter on port 8082
 ```
-jupyter notebook --no-browser --port=8082
+$ source ~/.bashrc
+$ jupyter notebook --no-browser --port=8082
 ```
 Note output link, e.g. http://localhost:8082/tree?token=aecbcd503d165a09944e8939e5d3b2a8dc719b2ec1477c78
 
-On a separate terminal, run
+2.3 On a new terminal, run
 `ssh -NL 8082:127.0.0.1:8082 ubuntu@<EC2 IP address> -i <Key Pair Path>`
+Note: There is not output
+
+2.4 Paste the output link from step 2.2 into your browser
