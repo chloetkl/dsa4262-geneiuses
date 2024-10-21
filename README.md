@@ -28,20 +28,14 @@ $ git clone git@github.com:chloetkl/dsa4262-geneiuses.git
 
 ## 2. Jupyter Instructions 
 
-2.1 Jupyter within an EC2 Instance 
-```sudo apt update
-sudo apt install python3-pip
-pip install jupyter
+2.1 Run script to setup Jupyter within an EC2 Instance 
+```
+$ chmod +x setup.sh
+$ ./setup.sh
 ```
 
-2.2 Write Jupyter to PATH
-```nano ~/.bashrc
-export PATH=$PATH:/home/ubuntu/.local/bin # Add this line
+2.2 Run Jupyter on port 8082
 ```
-
-2.3 Running Jupyter
-```source ~/.bashrc
-cd dsa4262-geneiuses
 jupyter notebook --no-browser --port=8082
 ```
 Note output link, e.g. http://localhost:8082/tree?token=aecbcd503d165a09944e8939e5d3b2a8dc719b2ec1477c78
