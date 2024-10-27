@@ -12,8 +12,8 @@ if ! grep -q 'export PATH=$PATH:~/.local/bin' ~/.bashrc; then
     echo 'export PATH=$PATH:~/.local/bin' >> ~/.bashrc
 fi
 
-# Reload .bashrc to apply PATH changes
-source ~/.bashrc
+# Export PATH for the current session
+export PATH=$PATH:/home/ubuntu/.local/bin
 
 # Activate nbstripout in the current Git repository
 if [ -d .git ]; then
