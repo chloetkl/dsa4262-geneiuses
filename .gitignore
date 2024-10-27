@@ -1,3 +1,4 @@
+code/rf_classifier.joblib
 data/SGNex*
 data/*.csv
 !data/
