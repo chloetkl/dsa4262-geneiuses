@@ -1,3 +1,4 @@
+data/SGNex*
 data/*.csv
 !data/
 *.ipynb_checkpoints/
