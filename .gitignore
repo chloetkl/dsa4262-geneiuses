@@ -4,3 +4,5 @@ data/*.csv
 *.ipynb_checkpoints/
 data/dataset0.json
 data/dataset0.json.gz
+data/sg-nex-data/*
+
