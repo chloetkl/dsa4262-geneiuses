@@ -33,7 +33,7 @@ $ git clone git@github.com:chloetkl/dsa4262-geneiuses.git
 
 2.1 Run script to setup Jupyter within an EC2 Instance 
 ```
-$ cd dsa4262-geneiuse
+$ cd dsa4262-geneiuses
 $ chmod +x setup.sh
 $ ./setup.sh
 ```
@@ -47,14 +47,9 @@ Copy either of the output links that are shown in the terminal under "Or copy an
 ```
     Or copy and paste one of these URLs:
         http://localhost:8082/tree?token=0a9aaf83afb4ff8761a3bf142ee7be9bf70b4e1431f779ee                                                                                http://127.0.0.1:8082/tree?token=0a9aaf83afb4ff8761a3bf142ee7be9bf70b4e1431f779ee 
-```
-2.3 Change directory to Git Repository
-```
-$ cd dsa4262-geneiuses
-```
 
-2.4 On a new terminal, run
+2.3 On a new terminal, run
 `ssh -NL 8082:127.0.0.1:8082 ubuntu@<EC2 IP address> -i <Key Pair Path>`
 Note: There is no output
 
-2.5 Paste the output link from step 2.2 into your browser
+2.4 Paste the output link from step 2.2 into your browser
