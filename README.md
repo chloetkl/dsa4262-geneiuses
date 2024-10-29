@@ -33,6 +33,7 @@ $ git clone git@github.com:chloetkl/dsa4262-geneiuses.git
 
 2.1 Run script to setup Jupyter within an EC2 Instance 
 ```
+$ cd dsa4262-geneiuse
 $ chmod +x setup.sh
 $ ./setup.sh
 ```
