@@ -23,6 +23,7 @@ if __name__ == "__main__":
     # Define the required and optional arguments
     parser.add_argument('--json_gz_file', type=str, required=True, help='Path to the input JSON GZ file')
     parser.add_argument('--output_path', type=str, default='default', help='Optional path to save the output')
+    parser.add_argument('--include_features', type=str, default=False, help='Optional path to save the output')
     
     # Parse the arguments
     args = parser.parse_args()
@@ -32,4 +33,4 @@ if __name__ == "__main__":
     classifier_file = '../model/rf_classifier.joblib.gz'  # Update with your default path
     
     # Call the generate_predictions function with the parsed parameters
-    generate_predictions(args.json_gz_file, selector_file, classifier_file, args.output_path)
+    generate_predictions(args.json_gz_file, selector_file, classifier_file, args.output_path, args.include_features)
