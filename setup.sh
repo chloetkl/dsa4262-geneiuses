@@ -6,6 +6,7 @@ sudo apt install -y python3-pip
 
 pip install jupyter
 pip install nbstripout
+pip install nbimporter
 
 pip install pandas==2.0.3
 pip install scikit-learn==1.3.2
