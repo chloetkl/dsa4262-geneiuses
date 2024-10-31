@@ -7,4 +7,5 @@ data/*.json
 data/*.json.gz
 data/sg-nex-data/*
 output/*.csv
-
+*.joblib
+output/*
