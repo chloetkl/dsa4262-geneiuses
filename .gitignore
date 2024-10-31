@@ -3,7 +3,8 @@ data/SGNex*
 data/*.csv
 !data/
 *.ipynb_checkpoints/
-data/dataset0.json
-data/dataset0.json.gz
+data/*.json
+data/*.json.gz
 data/sg-nex-data/*
+output/*.csv
 
