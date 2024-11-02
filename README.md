@@ -1,5 +1,20 @@
-# dsa4262-geneiuses
+# DSA4262 Team Geneiuses
 
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Run pipeline](#run-pipeline)
+- [Developer notes](#developer-notes)
+
+# Introduction
+
+# Run pipeline
+```
+$ cd code
+$ python3 run_model.py --json_gz_file '../data/test_data.json'
+```
+
+# Developer notes
 ## 1. Create AWS instance and mount git repo
 
 1.1 Create AWS EC2 instance
