@@ -9,3 +9,4 @@ data/sg-nex-data/*
 output/*.csv
 *.joblib
 output/*
+!data/test_data.json
