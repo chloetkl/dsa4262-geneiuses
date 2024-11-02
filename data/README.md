@@ -4,7 +4,7 @@
 ```
 $ sed -n '0~10p' dataset0.json > test_data.json
 $ ls -lh test_data.json
--rw-rw-r-- 1 ubuntu ubuntu 60M Nov  2 07:49 data/test_data.json
+-rw-rw-r-- 1 ubuntu ubuntu 60M Nov  2 07:49 test_data.json
 $ wc -l test_data.json
 12183 test_data.json
 ```
