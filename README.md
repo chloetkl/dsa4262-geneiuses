@@ -72,9 +72,12 @@ $ head ../output/test_data.csv # copy output path here to see format of output
 - /model
     - (model output will be found here, e.g. test_output.joblib)
 ```
-2. Run below. test_data.json is used as an example
+2. Run get_model.py. Arguments:
+- training_data_json: training features path (.json or .json.gz)
+- labels: labels path
+- output_joblib_path: path for model to be saved (.joblib)
 ```
-python3 get_model.py --training_data_json '../data/test_data.json.gz' --labels '../data/data.info.labelled' --output_joblib_path '../model/test_output.joblib'
+python3 get_model.py --training_data_json '../data/test_data.json' --labels '../data/data.info.labelled' --output_joblib_path '../model/test_model.joblib'
 ```
 
 # Developer notes
