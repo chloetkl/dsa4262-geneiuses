@@ -32,13 +32,16 @@ $ ./setup.sh
 
 ## 1. Run trained model on test data
 1. Folder structure
-     - Test data is stored in /data directory
-     - Script is found in /code
-     - Output will be stored in /output
+     - /data
+        - test_data.json
+     - /code
+         - run_model.py
+     - /output
+         - (test_data.csv)
 
 2. Run script `run_model.py`. Arguments:
     - json_gz_file (required)
-        - Description: Path to the input JSON GZ file containing data for model predictions.
+        - Description: Path to the input JSON GZ file containing data for model predictions. Accepted formats: .json, .json.gz
         - Example: --json_gz_file ../data/dataset0.json.gz
     - selector (optional, default='../model/selector.joblib.gz')
         - Description: Path to the selector file, which performs feature selection.
