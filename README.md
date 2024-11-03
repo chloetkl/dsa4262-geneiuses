@@ -34,11 +34,11 @@ $ ./setup.sh
 1. Folder structure
    ```
      - /data
-        - test_data.json
+       - test_data.json
      - /code
-         - run_model.py
+       - run_model.py
      - /output
-         - (test_data.csv)
+       - (test_data.csv)
    ```
 
 3. Run script `run_model.py`. Arguments:
