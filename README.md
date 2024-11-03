@@ -6,13 +6,91 @@
 - [2. Run pipeline](#run-pipeline)
 - [3. Developer notes](#developer-notes)
 
-# 1. Introduction
+# Introduction
 
-# 2, Run pipeline
+# Run pipeline
+
+## 0. Prerequisite: set up
+1. Start AWS EC2 machine
+    - Instance type: t3.large
+  
+2. Connect to that instance on terminal
+```
+$ ssh -i <path to pem file> ubuntu@<instance ip address>
+```
+
+3. Close the repository from GitHub
+```
+$ git clone https://github.com/chloetkl/dsa4262-geneiuses.git
+```
+
+4. Run set_up.sh
+```
+$ cd dsa4262-geneiuses
+$ ./setup.sh
+```
+
+## 1. Run trained model on test data
+1. Test data is stored in /data directory
+2. Script is found in /code
+3. Output will be stored in /output
+
+Run script `run_model.py`. Arguments:
+
+- json_gz_file (required)
+    - Description: Path to the input JSON GZ file containing data for model predictions.
+    - Example: --json_gz_file data/input.json.gz
+- selector (optional)
+    - Default: '../model/selector.joblib.gz'
+    - Description: Path to the selector file, which may contain preprocessing steps or feature selection components used by the model.
+    - Example: --selector model/new_selector.joblib.gz
+- classifier (optional)
+    - Default: '../model/rf_classifier.joblib.gz'
+    - Description: Path to the classifier file. This is the main model file (e.g., a trained random forest classifier) that will perform predictions.
+    - Example: --classifier model/custom_classifier.joblib.gz
+- output_path (optional)
+    - Default: 'default'
+    - Description: Specifies the path where the output should be saved. If not provided, the final csv saves to output folder.
+    - Example: --output_path results/output.csv
+- include_features (optional)
+    - Default: False
+    - Description: Allows specifying if additional features should be included in the output.
+    - Example: --include_features True
+```
+# Example script to run on test_data.json
+$ cd code
+$ python3 run_model.py --json_gz_file '../data/test_data.json' # insert relative path to test data from code
+le '../data/test_data.json'
+Input file is not a .gz file. Unzipping not required
+Step 1/6: Processing JSON completed.
+Step 2/6: Cleaning features completed.
+Step 3/6: Feature selection completed.
+[Parallel(n_jobs=1)]: Done  49 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=1)]: Done 199 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=1)]: Done  49 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=1)]: Done 199 tasks      | elapsed:    0.0s
+
+Tabulated Prediction Counts:
+   prediction  count
+0           0    108
+1           1     13
+Step 4/6: Prediction using model completed.
+     transcript_id transcript_position     score
+0  ENST00000084795                 233  0.056420
+1  ENST00000205636                3411  0.034202
+2  ENST00000216254                1007  0.088522
+3  ENST00000216968                1159  0.018773
+4  ENST00000220913                 999  0.024692
+Step 5/6: Cleaning results completed.
+Step 6/6: Results written to ../output/test_data.csv
+
+$ head ../output/test_data.csv # copy output path here to see format of output
 
 ```
-$ cd code
-$ python3 run_model.py --json_gz_file '../data/test_data.json'
+
+## 2. Generate new training model on new train data and labels
+```
+
 ```
 
 # Developer notes
