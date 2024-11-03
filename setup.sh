@@ -22,6 +22,8 @@ fi
 # Export PATH for the current session
 export PATH=$PATH:/home/ubuntu/.local/bin
 
+mkdir output
+
 # Activate nbstripout in the current Git repository
 if [ -d .git ]; then
     nbstripout --install
