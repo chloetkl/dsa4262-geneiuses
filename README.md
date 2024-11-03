@@ -58,30 +58,6 @@ $ ./setup.sh
 # Example script to run on test_data.json
 $ cd code
 $ python3 run_model.py --json_gz_file '../data/test_data.json' # insert relative path to test data from code
-le '../data/test_data.json'
-Input file is not a .gz file. Unzipping not required
-Step 1/6: Processing JSON completed.
-Step 2/6: Cleaning features completed.
-Step 3/6: Feature selection completed.
-[Parallel(n_jobs=1)]: Done  49 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=1)]: Done 199 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=1)]: Done  49 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=1)]: Done 199 tasks      | elapsed:    0.0s
-
-Tabulated Prediction Counts:
-   prediction  count
-0           0    108
-1           1     13
-Step 4/6: Prediction using model completed.
-     transcript_id transcript_position     score
-0  ENST00000084795                 233  0.056420
-1  ENST00000205636                3411  0.034202
-2  ENST00000216254                1007  0.088522
-3  ENST00000216968                1159  0.018773
-4  ENST00000220913                 999  0.024692
-Step 5/6: Cleaning results completed.
-Step 6/6: Results written to ../output/test_data.csv
-
 $ head ../output/test_data.csv # copy output path here to see format of output
 
 ```
