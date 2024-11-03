@@ -59,12 +59,22 @@ $ ./setup.sh
 $ cd code
 $ python3 run_model.py --json_gz_file '../data/test_data.json' # insert relative path to test data from code
 $ head ../output/test_data.csv # copy output path here to see format of output
-
 ```
 
 ## 2. Generate new training model on new train data and labels
+1. Directory structure
 ```
-
+- /data
+    - (add training features here, e.g. dataset0.json.gz, see section on Jupyter notebook to add data easily)
+    - (add training labels here, e.g. data.info.labelled)
+- /code
+    - get_model.py
+- /model
+    - (model output will be found here, e.g. test_output.joblib)
+```
+2. Run below. test_data.json is used as an example
+```
+python3 get_model.py --training_data_json '../data/test_data.json.gz' --labels '../data/data.info.labelled' --output_joblib_path '../model/test_output.joblib'
 ```
 
 # Developer notes
