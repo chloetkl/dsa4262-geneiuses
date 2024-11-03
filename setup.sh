@@ -22,7 +22,9 @@ fi
 # Export PATH for the current session
 export PATH=$PATH:/home/ubuntu/.local/bin
 
-mkdir output
+if [ ! -d "output" ]; then
+    mkdir output
+fi
 
 # Activate nbstripout in the current Git repository
 if [ -d .git ]; then
