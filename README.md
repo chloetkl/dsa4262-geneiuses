@@ -2,13 +2,14 @@
 
 # Table of Contents
 
-- [Introduction](#introduction)
-- [Run pipeline](#run-pipeline)
-- [Developer notes](#developer-notes)
+- [1. Introduction](#introduction)
+- [2. Run pipeline](#run-pipeline)
+- [3. Developer notes](#developer-notes)
 
-# Introduction
+# 1. Introduction
 
-# Run pipeline
+# 2, Run pipeline
+
 ```
 $ cd code
 $ python3 run_model.py --json_gz_file '../data/test_data.json'
