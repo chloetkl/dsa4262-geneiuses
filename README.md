@@ -31,31 +31,24 @@ $ ./setup.sh
 ```
 
 ## 1. Run trained model on test data
-1. Test data is stored in /data directory
-2. Script is found in /code
-3. Output will be stored in /output
+1. Folder structure
+     - Test data is stored in /data directory
+     - Script is found in /code
+     - Output will be stored in /output
 
-Run script `run_model.py`. Arguments:
-
-- json_gz_file (required)
-    - Description: Path to the input JSON GZ file containing data for model predictions.
-    - Example: --json_gz_file data/input.json.gz
-- selector (optional)
-    - Default: '../model/selector.joblib.gz'
-    - Description: Path to the selector file, which may contain preprocessing steps or feature selection components used by the model.
-    - Example: --selector model/new_selector.joblib.gz
-- classifier (optional)
-    - Default: '../model/rf_classifier.joblib.gz'
-    - Description: Path to the classifier file. This is the main model file (e.g., a trained random forest classifier) that will perform predictions.
-    - Example: --classifier model/custom_classifier.joblib.gz
-- output_path (optional)
-    - Default: 'default'
-    - Description: Specifies the path where the output should be saved. If not provided, the final csv saves to output folder.
-    - Example: --output_path results/output.csv
-- include_features (optional)
-    - Default: False
-    - Description: Allows specifying if additional features should be included in the output.
-    - Example: --include_features True
+2. Run script `run_model.py`. Arguments:
+    - json_gz_file (required)
+        - Description: Path to the input JSON GZ file containing data for model predictions.
+        - Example: --json_gz_file ../data/dataset0.json.gz
+    - selector (optional, default='../model/selector.joblib.gz')
+        - Description: Path to the selector file, which performs feature selection.
+    - classifier (optional, default='../model/rf_classifier.joblib.gz')
+        - Description: Path to the classifier file. This is the main model file (e.g., a trained random forest classifier) that will perform predictions.
+    - output_path (optional, default='default')
+        - Description: Specifies the path where the output should be saved.
+        - If not stated, name follows json_gz_file e.g. Output path of ../data/dataset0.json.gz is ../output/dataset0.csv
+    - include_features (optional, default=False)
+        - Description: Allows specifying if additional features should be included in the output.
 ```
 # Example script to run on test_data.json
 $ cd code
