@@ -13,6 +13,9 @@ pip install scikit-learn==1.3.2
 pip install imbalanced-learn==0.12.4
 pip install matplotlib==3.7.5
 pip install seaborn==0.13.2
+pip install plotly==5.24.1
+pip install scikit-misc==0.2.0
+
 
 # Add local bin to PATH in .bashrc if not already present
 if ! grep -q 'export PATH=$PATH:~/.local/bin' ~/.bashrc; then
