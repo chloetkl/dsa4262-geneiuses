@@ -15,7 +15,9 @@ pip install matplotlib==3.7.5
 pip install seaborn==0.13.2
 pip install plotly==5.24.1
 pip install scikit-misc==0.2.0
-
+pip install plotnine
+pip install tabulate
+pip install prettytable
 
 # Add local bin to PATH in .bashrc if not already present
 if ! grep -q 'export PATH=$PATH:~/.local/bin' ~/.bashrc; then
