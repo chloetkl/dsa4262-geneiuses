@@ -32,7 +32,7 @@ $ ./setup.sh
 ```
 
 ## 2.1 Run trained model on test data
-1. Folder structure
+1. Folder structure is shown below. **Add your test data**, like `test_data.json` to `/data `
    ```
      - /data
        - test_data.json
