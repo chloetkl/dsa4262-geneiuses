@@ -1,6 +1,8 @@
 # DSA4262 Team Geneiuses
 
-# Table of Contents
+
+
+### Contents
 
 - [1. Introduction](#1-introduction)
 - [2. Run pipeline](#2-run-pipeline)
