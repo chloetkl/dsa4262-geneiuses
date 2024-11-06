@@ -5,9 +5,10 @@
 ### Contents
 
 - [1. Introduction](#1-introduction)
-- [2. Run pipeline](#2-run-pipeline)
-- [3. Developer notes](#3-developer-notes)
-- [4. References](#4-references)
+- [2. Run Pipeline](#2-run-pipeline)
+- [3. Repository structure](#3-repository-structure)
+- [4. Developer notes](#3-developer-notes)
+- [5. References](#4-references)
 
 
 # 1 Introduction
@@ -83,15 +84,33 @@ $ head ../output/test_data.csv # copy output path here to see format of output
     - (model output will be found here, e.g. test_output.joblib)
 ```
 2. Run get_model.py. Arguments:
-- training_data_json: training features path (.json or .json.gz)
-- labels: labels path
-- output_joblib_path: path for model to be saved (.joblib)
+| Argument           | Example / Default                                                                                      | Description                                                                                                                                          |
+|--------------------|--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `training_data_json` | (Required) Example: `--training_data_json '../data/dataset0.json.gz'`                                          | Path to the input JSON GZ file containing train data for model predictions. Accepted formats: `.json`, `.json.gz`                                         |
+| `labels`         | (Required) Example: `'../data/data.info.labelled'`                                                    | Path to the labels file.                                                                              |
+| `output_joblib_path`       | (Required) Default: `'../model/test_model.joblib'`                                               | Path for output model to be saved.        |
+
 ```
 python3 get_model.py --training_data_json '../data/test_data.json' --labels '../data/data.info.labelled' --output_joblib_path '../model/test_model.joblib'
 ```
 
-# 3 Developer notes
-## 3.1 Create AWS instance and mount git repo
+# 3 Repository structure
+
+```
+dsa4262-geneiuses
+├── data                                            # Store all source data: train data, test data and SG-Nex data. test.json is stored here
+├── code                   
+│   ├── main.ipynb                                  # Notebook with machine learning and fine tuning (Task 1)
+│   ├── prediction_and_visualisation.ipynb          # Notebook with codes to generate visualisationns (Task 2)
+│   ├── run_model.py                                # Runs model to predict score based on test data
+│   └── get_model.py                                # Generates new model given new training data
+└── model
+    ├── rf_classifier.joblib.gz                     # Trained Random Forest model
+    └── selector.joblib.gz                          # Feature selection model
+```
+
+# 4 Developer notes
+## 4.1 Create AWS instance and mount git repo
 
 1. Create AWS EC2 instance
 - Instance type: m6a.4xlarge
@@ -120,7 +139,7 @@ $ git clone git@github.com:chloetkl/dsa4262-geneiuses.git
 ```
 
 
-## 3.2 Jupyter Instructions 
+## 4.2 Jupyter Instructions 
 
 1. Run script to setup Jupyter within an EC2 Instance 
 ```
@@ -147,7 +166,7 @@ Note: There is no output
 4. Paste the output link from step 2.2 into your browser
 
 
-# 4 References
+# 5 References
 
 - The SG-NEx data was accessed on [01-11-2024] at registry.opendata.aws/sg-nex-data.
 - Chen, Y. et al. "A systematic benchmark of Nanopore long read RNA sequencing for transcript level analysis in human cell lines." bioRxiv (2021). doi: https://doi.org/10.1101/2021.04.21.440736
