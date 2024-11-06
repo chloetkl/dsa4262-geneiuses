@@ -5,7 +5,7 @@
 - [1. Introduction](#1-introduction)
 - [2. Run pipeline](#2-run-pipeline)
 - [3. Developer notes](#3-developer-notes)
-- [4. References] (#4-references)
+- [4. References](#4-references)
 
 
 # 1 Introduction
