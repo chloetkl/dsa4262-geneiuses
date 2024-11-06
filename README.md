@@ -42,21 +42,17 @@ $ ./setup.sh
        - (test_data.csv)
    ```
 
-3. Run script `run_model.py`. Arguments:
-    - json_gz_file (required)
-        - Description: Path to the input JSON GZ file containing data for model predictions. Accepted formats: .json, .json.gz
-        - Example: --json_gz_file ../data/dataset0.json.gz
-    - selector (optional, default='../model/selector.joblib.gz')
-        - Description: Path to the selector file, which performs feature selection.
-    - classifier (optional, default='../model/rf_classifier.joblib.gz')
-        - Description: Path to the classifier file. This is the main model file (e.g., a trained random forest classifier) that will perform predictions.
-    - output_path (optional, default='default')
-        - Description: Specifies the path where the output should be saved.
-        - If not stated, name follows json_gz_file e.g. Output path of ../data/dataset0.json.gz is ../output/dataset0.csv
-    - include_features (optional, default=False)
-        - Description: Allows specifying if additional features should be included in the output.
+3. Run script `run_model.py`. 
+| Argument           | Example / Default                                                                                      | Description                                                                                                                                          |
+|--------------------|--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `json_gz_file`     | (Required) Example: `--json_gz_file ../data/dataset0.json.gz`                                          | Path to the input JSON GZ file containing data for model predictions. Accepted formats: `.json`, `.json.gz`                                         |
+| `selector`         | (Optional) Default: `'../model/selector.joblib.gz'`                                                    | Path to the selector file, which performs feature selection.                                                                              |
+| `classifier`       | (Optional) Default: `'../model/rf_classifier.joblib.gz'`                                               | Path to the classifier file. This is the main model file (e.g., a trained random forest classifier) that will perform predictions.        |
+| `output_path`      | (Optional) Default: `'default'`                                                                        | Specifies the path where the output should be saved. If not stated, the output name follows `json_gz_file` (e.g., `../output/dataset0.csv`). |
+| `include_features` | (Optional) Default: `False`                                                                            | Allows specifying if additional features should be included in the output.                                                                |
+
+Example script to run on test_data.json
 ```
-# Example script to run on test_data.json
 $ cd code
 $ python3 run_model.py --json_gz_file '../data/test_data.json' # insert relative path to test data from code
 $ head ../output/test_data.csv # copy output path here to see format of output
