@@ -59,7 +59,7 @@ $ ./setup.sh
 
 | Argument           | Example / Default                                                                                      | Description                                                                                                                                          |
 |--------------------|--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `json_gz_file`     | (Required) Example: `--json_gz_file ../data/dataset0.json.gz`                                          | Path to the input JSON GZ file containing data for model predictions. Accepted formats: `.json`, `.json.gz`                                         |
+| `json_gz_file`     | (Required) Example: `../data/dataset0.json.gz`                                          | Path to the input JSON GZ file containing data for model predictions. Accepted formats: `.json`, `.json.gz`                                         |
 | `selector`         | (Optional) Default: `'../model/selector.joblib.gz'`                                                    | Path to the selector file, which performs feature selection.                                                                              |
 | `classifier`       | (Optional) Default: `'../model/rf_classifier.joblib.gz'`                                               | Path to the classifier file. This is the main model file (e.g., a trained random forest classifier) that will perform predictions.        |
 | `output_path`      | (Optional) Default: `'default'`                                                                        | Specifies the path where the output should be saved. If not stated, the output name follows `json_gz_file` (e.g., `../output/dataset0.csv`). |
@@ -87,7 +87,7 @@ $ head ../output/test_data.csv # copy output path here to see format of output
 
 | Argument           | Example / Default                                                                                      | Description                                                                                                                                          |
 |--------------------|--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `training_data_json` | (Required) Example: `--training_data_json '../data/dataset0.json.gz'`                                          | Path to the input JSON GZ file containing train data for model predictions. Accepted formats: `.json`, `.json.gz`                                         |
+| `training_data_json` | (Required) Example: `'../data/dataset0.json.gz'`                                          | Path to the input JSON GZ file containing train data for model predictions. Accepted formats: `.json`, `.json.gz`                                         |
 | `labels`         | (Required) Example: `'../data/data.info.labelled'`                                                    | Path to the labels file.                                                                              |
 | `output_joblib_path`       | (Required) Default: `'../model/test_model.joblib'`                                               | Path for output model to be saved.        |
 
