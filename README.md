@@ -42,7 +42,8 @@ $ ./setup.sh
        - (test_data.csv)
    ```
 
-3. Run script `run_model.py`. 
+3. Run script `run_model.py`.
+
 | Argument           | Example / Default                                                                                      | Description                                                                                                                                          |
 |--------------------|--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `json_gz_file`     | (Required) Example: `--json_gz_file ../data/dataset0.json.gz`                                          | Path to the input JSON GZ file containing data for model predictions. Accepted formats: `.json`, `.json.gz`                                         |
