@@ -5,9 +5,19 @@
 - [1. Introduction](#1-introduction)
 - [2. Run pipeline](#2-run-pipeline)
 - [3. Developer notes](#3-developer-notes)
+- [4. References] (#4-references)
 
 
 # 1 Introduction
+
+## Background
+m6A RNA modifications are one of the most common and important chemical changes that occur on RNA molecules (Hong et al., 2022). These modifications can influence various aspects of RNA function, including its stability, how it is processed, and how it translates into proteins. They also play a critical role in cancer and understanding where and how these modifications happen can potentially uncover targets for early diagnosis and treatment of cancers (Sun et al., 2019).
+
+## Problem Statement
+In this project, we aim to identify m6A modifications in RNA sequences by analyzing direct RNA sequencing data from different human cell lines. The data comes from the SG-NEx project, which includes RNA samples from cell types such as lung (A549), colon (Hct116), liver (HepG2), blood (K562), and breast (MCF7). Studying m6A modifications in such cancer cell lines can provide valuable insights into the behavior of cancer cells and the mechanisms underlying cancer progression. Using machine learning, we hope to develop a method to predict where m6A modifications occur and analyze their patterns across these cell lines. This project provides an opportunity to combine data science and biology, using computational tools to uncover the hidden patterns of RNA modifications and contribute to a deeper understanding of gene regulation and expression in different cellular contexts.
+2 Problem statement
+We have divided our research problem into two parts. Task 1 explores how we can predict the modification of m6A at each transcript position using nanopore sequencing data. Task 2 investigates which features are correlated with m6A modifications among cell lines from the SG-Nex project and examines how m6A modifications differ across these cell lines.
+
 
 # 2 Run pipeline
 
@@ -25,7 +35,7 @@ $ ssh -i <path to pem file> ubuntu@<instance ip address>
 $ git clone https://github.com/chloetkl/dsa4262-geneiuses.git
 ```
 
-4. Run set_up.sh
+4. Run setup.sh
 ```
 $ cd dsa4262-geneiuses
 $ ./setup.sh
@@ -125,10 +135,20 @@ $ jupyter notebook --no-browser --port=8082
 Copy either of the output links that are shown in the terminal under "Or copy and paste one of these URLs:". For example,
 ```
     Or copy and paste one of these URLs:
-        http://localhost:8082/tree?token=0a9aaf83afb4ff8761a3bf142ee7be9bf70b4e1431f779ee                                                                                http://127.0.0.1:8082/tree?token=0a9aaf83afb4ff8761a3bf142ee7be9bf70b4e1431f779ee 
+        http://localhost:8082/tree?token=0a9aaf83afb4ff8761a3bf142ee7be9bf70b4e1431f779ee                                                                                http://127.0.0.1:8082/tree?token=0a9aaf83afb4ff8761a3bf142ee7be9bf70b4e1431f779ee
+```
 
 3. On a new terminal, run
 `ssh -NL 8082:127.0.0.1:8082 ubuntu@<EC2 IP address> -i <Key Pair Path>`
 Note: There is no output
 
 4. Paste the output link from step 2.2 into your browser
+
+
+# 4 References
+
+- The SG-NEx data was accessed on [01-11-2024] at registry.opendata.aws/sg-nex-data.
+- Chen, Y. et al. "A systematic benchmark of Nanopore long read RNA sequencing for transcript level analysis in human cell lines." bioRxiv (2021). doi: https://doi.org/10.1101/2021.04.21.440736
+- Hong, J., Xu, K. & Lee, J.H. Biological roles of the RNA m6A modification and its implications in cancer. Exp Mol Med 54, 1822–1832 (2022). https://doi.org/10.1038/s12276-022-00897-8
+- Sun, T., Wu, R., & Ming, L. (2019). The role of m6A RNA methylation in cancer. Biomedicine & Pharmacotherapy, 112, 108613. https://doi.org/10.1016/j.biopha.2019.108613
+
