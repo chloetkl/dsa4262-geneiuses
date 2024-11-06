@@ -1,6 +1,6 @@
 # DSA4262 Team Geneiuses
 
-
+![](image/cover.png)
 
 ### Contents
 
