@@ -84,6 +84,7 @@ $ head ../output/test_data.csv # copy output path here to see format of output
     - (model output will be found here, e.g. test_output.joblib)
 ```
 2. Run get_model.py. Arguments:
+
 | Argument           | Example / Default                                                                                      | Description                                                                                                                                          |
 |--------------------|--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `training_data_json` | (Required) Example: `--training_data_json '../data/dataset0.json.gz'`                                          | Path to the input JSON GZ file containing train data for model predictions. Accepted formats: `.json`, `.json.gz`                                         |
